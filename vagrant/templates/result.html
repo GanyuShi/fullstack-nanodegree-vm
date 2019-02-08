@@ -1,0 +1,86 @@
+<head>
+   <link rel="stylesheet" type="text/css" href= "{{url_for('static', filename='mystyle.css')}}">
+   <style>
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 10px;
+}
+</style>
+</head>
+<div class="row">
+
+   <div class="column">
+      <h1> Search result </h1>
+      <p>
+         <img src=./static/{{filename}} alt="Italian Trulli">
+      </p>
+      <a href = '{{url_for('new_query')}}'> Return </a>
+   </div>
+
+   <div class="column">
+      <div class="gallery">
+         <a target="_blank" href="./static/IMG_9710.jpg">
+         <img src="./static/IMG_8884.jpg" alt="Cinque Terre" width="600" height="400">
+         </a>
+         <!-- <div class="desc">Add a description of the image here</div> -->
+      </div>
+      <div class="gallery">
+         <a target="_blank" href="./static/IMG_9710.jpg">
+         <img src="./static/IMG_9710.jpg" alt="Forest" width="600" height="400">
+         </a>
+         <!-- <div class="desc">Add a description of the image here</div> -->
+      </div>
+      <div class="gallery">
+         <a target="_blank" href="./static/IMG_9710.jpg">
+         <img src="./static/IMG_9710.jpg" alt="Cinque Terre" width="600" height="400">
+         </a>
+         <!-- <div class="desc">Add a description of the image here</div> -->
+      </div>
+      <div class="gallery">
+         <a target="_blank" href="./static/IMG_9710.jpg">
+         <img src="./static/IMG_9710.jpg" alt="Forest" width="600" height="400">
+         </a>
+         <!-- <div class="desc">Add a description of the image here</div> -->
+      </div>
+      <div class="gallery">
+         <a target="_blank" href="./static/IMG_9710.jpg">
+         <img src="./static/IMG_9710.jpg" alt="Cinque Terre" width="600" height="400">
+         </a>
+         <!-- <div class="desc">Add a description of the image here</div> -->
+      </div>
+      <div class="gallery">
+         <a target="_blank" href="./static/IMG_9710.jpg">
+         <img src="./static/IMG_9710.jpg" alt="Forest" width="600" height="400">
+         </a>
+         <!-- <div class="desc">Add a description of the image here</div> -->
+      </div>
+      <div class="gallery">
+         <a target="_blank" href="./static/IMG_9710.jpg">
+         <img src="./static/IMG_9710.jpg" alt="Cinque Terre" width="600" height="400">
+         </a>
+         <!-- <div class="desc">Add a description of the image here</div> -->
+      </div>
+      <div class="gallery">
+         <a target="_blank" href="./static/IMG_9710.jpg">
+         <img src="./static/IMG_9710.jpg" alt="Forest" width="600" height="400">
+         </a>
+         <!-- <div class="desc">Add a description of the image here</div> -->
+      </div>
+      <div class="gallery">
+         <a target="_blank" href="./static/IMG_9710.jpg">
+         <img src="./static/IMG_9710.jpg" alt="Cinque Terre" width="600" height="400">
+         </a>
+         <!-- <div class="desc">Add a description of the image here</div> -->
+      </div>
+   </div>
+
+</div>
