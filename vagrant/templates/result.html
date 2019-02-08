@@ -1,84 +1,83 @@
 <!DOCTYPE html>
 <html>
-   <style>
-      * {
-      box-sizing: border-box;
-      }
-      body {
-      margin: 0;
-      font-family: Arial;
-      }
-      .header {
-      text-align: center;
-      padding: 32px;
-      }
-      .row {
-      display: flex;
-      }
-      /* Create two equal columns that sits next to each other */
-      .column {
-      flex: 50%;
-      padding: 10px;
-      }
-      .gallery {
-      display: -ms-flexbox; /* IE10 */
-      display: flex;
-      -ms-flex-wrap: wrap; /* IE10 */
-      flex-wrap: wrap;
-      padding: 0 4px;
-      }
-      /* Create four equal img_columns that sits next to each other */
-      .img_column {
-      -ms-flex: 25%; /* IE10 */
-      flex: 25%;
-      max-width: 25%;
-      padding: 0 4px;
-      }
-      .img_column img {
-      margin-top: 8px;
-      vertical-align: middle;
-      }
-
-      .column img {
-      	/*padding: 10px;*/
-      	vertical-align: middle;
-      	text-align:center;
-      }
-
-      /* Responsive layout - makes a two img_column-layout instead of four img_columns */
-      @media screen and (max-width: 800px) {
-      .img_column {
-      -ms-flex: 50%;
-      flex: 50%;
-      max-width: 50%;
-      }
-      }
-      /* Responsive layout - makes the two img_columns stack on top of each other instead of next to each other */
-      @media screen and (max-width: 600px) {
-      .img_column {
-      -ms-flex: 100%;
-      flex: 100%;
-      max-width: 100%;
-      }
-      }
-   </style>
+   <head>
+      <!-- <link rel=stylesheet type=text/css href="{{url_for('static', filename='mystyle.css')}}"> -->
+      <style>
+         * {
+         box-sizing: border-box;
+         }
+         body {
+         margin: 0;
+         font-family: Arial;
+         }
+         .header {
+         text-align: center;
+         padding: 32px;
+         }
+         .row {
+         display: flex;
+         }
+         /* Create two equal columns that sits next to each other */
+         .column {
+         flex: 50%;
+         padding: 10px;
+         }
+         .gallery {
+         display: -ms-flexbox; /* IE10 */
+         display: flex;
+         -ms-flex-wrap: wrap; /* IE10 */
+         flex-wrap: wrap;
+         padding: 0 4px;
+         }
+         /* Create four equal img_columns that sits next to each other */
+         .img_column {
+         -ms-flex: 25%; /* IE10 */
+         flex: 25%;
+         max-width: 25%;
+         padding: 0 4px;
+         }
+         .img_column img {
+         margin-top: 8px;
+         vertical-align: middle;
+         }
+         .column img {
+         /*padding: 10px;*/
+         vertical-align: middle;
+         text-align:center;
+         }
+         /* Responsive layout - makes a two img_column-layout instead of four img_columns */
+         @media screen and (max-width: 800px) {
+         .img_column {
+         -ms-flex: 50%;
+         flex: 50%;
+         max-width: 50%;
+         }
+         }
+         /* Responsive layout - makes the two img_columns stack on top of each other instead of next to each other */
+         @media screen and (max-width: 600px) {
+         .img_column {
+         -ms-flex: 100%;
+         flex: 100%;
+         max-width: 100%;
+         }
+         }
+      </style>
+   </head>
    <body>
       <!-- Header -->
       <div class="header">
          <h1>Search by Image</h1>
          <p>Clothing Segmentation and Automatic Product Recommendation System</p>
       </div>
-
       <div class="row">
          <div class="column">
-         	<!-- Input image -->
+            <!-- Input image -->
             <h1> Input Image </h1>
             <p>
                <img src=./static/{{filename}} alt="Input Image" style="width:80%">
             </p>
             <a href = '{{url_for('new_query')}}'> Return </a>
          </div>
-
          <div class="column">
             <!-- Photo Grid -->
             <div class="gallery">
