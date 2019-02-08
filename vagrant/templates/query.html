@@ -1,6 +1,26 @@
+<head>
+   <!-- <link rel=stylesheet type=text/css href="{{url_for('static', filename='mystyle.css')}}"> -->
+   <style>
+      .header {
+      text-align: center;
+      padding-top: px;
+      }
+   </style>
+</head>
 <title>Search by Image</title>
-<h1>Search by Image</h1>
-<form method=post enctype=multipart/form-data>
-  <p><input type=file name=file>
-     <input type=submit value=Search>
+<div class="header">
+   <h1>Search by Image</h1>
+   <p>Clothing Segmentation and Automatic Product Recommendation System</p>
+</div>
+<form method=post enctype=multipart/form-data align='center'>
+   <p><img id="output"/>
+   <p><input type=file name=file onchange="loadFile(event)">
+      <input type=submit value=Search>
+   </p>
+   <script>
+      var loadFile = function(event) {
+        var output = document.getElementById('output');
+        output.src = URL.createObjectURL(event.target.files[0]);
+      };
+   </script>
 </form>
