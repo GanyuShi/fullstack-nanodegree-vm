@@ -11,11 +11,49 @@ div.gallery:hover {
 
 div.gallery img {
   max-width: 100%;
-  height: auto;
-  object-fit: contain
+  max-height: 100%;
 }
 
 div.desc {
   padding: 15px;
   text-align: center;
+}
+
+.gallery {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal img_columns that sits next to each other */
+.img_column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.img_column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Responsive layout - makes a two img_column-layout instead of four img_columns */
+@media screen and (max-width: 500px) {
+  .img_column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two img_columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 200px) {
+  .img_column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
 }

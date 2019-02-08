@@ -1,7 +1,5 @@
+<!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href= "{{url_for('static', filename='mystyle.css')}}">
 <style>
 * {
   box-sizing: border-box;
@@ -13,25 +11,119 @@
 
 /* Create two equal columns that sits next to each other */
 .column {
-  flex: 50%;
+  flex: 10%;
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.gallery {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal img_columns that sits next to each other */
+.img_column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.img_column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Responsive layout - makes a two img_column-layout instead of four img_columns */
+@media screen and (max-width: 800px) {
+  .img_column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two img_columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .img_column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
 }
 </style>
-</head>
 <body>
 
-<h2>Two Equal Columns</h2>
+<!-- Header -->
+<div class="header">
+  <h1>Responsive Image Grid</h1>
+  <p>Resize the browser window to see the responsive effect.</p>
+</div>
+
 
 <div class="row">
-  <div class="column" style="background-color:#aaa;">
-    <h2>Column 1</h2>
-    <p>Some text..</p>
+
+   <div class="column">
+      <h1> Search result </h1>
+      <p>
+         <img src=./static/{{filename}} alt="Italian Trulli">
+      </p>
+      <a href = '{{url_for('new_query')}}'> Return </a>
+   </div>
+
+   <div class="column">
+<!-- Photo Grid -->
+<div class="gallery"> 
+  <div class="img_column">
+    <img src="./static/IMG_9710.jpg" style="width:100%">
+    <img src="./static/IMG_9710.jpg" style="width:100%">
+    <img src="./static/b575bb73-22ac-4387-a8c9-78e1e0e3b703.jpg" style="width:100%">
+    <img src="./static/600_600_e42a23c630f77ef6.jpg" style="width:100%">
+    <img src="./static/IMG_8884.jpg" style="width:100%">
+    <img src="./static/IMG_9710.jpg" style="width:100%">
+    <img src="./static/IMG_8884.jpg" style="width:100%">
   </div>
-  <div class="column" style="background-color:#bbb;">
-    <h2>Column 2</h2>
-    <p>Some text..</p>
+  <div class="img_column">
+    <img src="./static/600_600_e42a23c630f77ef6.jpg" style="width:100%">
+    <img src="./static/IMG_8884.jpg" style="width:100%">
+    <img src="./static/b575bb73-22ac-4387-a8c9-78e1e0e3b703.jpg" style="width:100%">
+    <img src="./static/b575bb73-22ac-4387-a8c9-78e1e0e3b703.jpg" style="width:100%">
+    <img src="./static/IMG_8884.jpg" style="width:100%">
+    <img src="./static/IMG_9710.jpg" style="width:100%">
+    <img src="./static/b575bb73-22ac-4387-a8c9-78e1e0e3b703.jpg" style="width:100%">
   </div>
+  <div class="img_column">
+    <img src="./static/IMG_8884.jpg" style="width:100%">
+    <img src="./static/IMG_9710.jpg" style="width:100%">
+    <img src="./static/b575bb73-22ac-4387-a8c9-78e1e0e3b703.jpg" style="width:100%">
+    <img src="./static/600_600_e42a23c630f77ef6.jpg" style="width:100%">
+    <img src="./static/IMG_8884.jpg" style="width:100%">
+    <img src="./static/IMG_9710.jpg" style="width:100%">
+    <img src="./static/IMG_8884.jpg" style="width:100%">
+  </div>
+  <div class="img_column">
+    <img src="./static/IMG_9710.jpg" style="width:100%">
+    <img src="./static/b575bb73-22ac-4387-a8c9-78e1e0e3b703.jpg" style="width:100%">
+    <img src="./static/IMG_8884.jpg" style="width:100%">
+    <img src="./static/600_600_e42a23c630f77ef6.jpg" style="width:100%">
+    <img src="./static/b575bb73-22ac-4387-a8c9-78e1e0e3b703.jpg" style="width:100%">
+    <img src="./static/IMG_8884.jpg" style="width:100%">
+    <img src="./static/b575bb73-22ac-4387-a8c9-78e1e0e3b703.jpg" style="width:100%">
+    </div>
+  </div>
+</div>
 </div>
 
 </body>
